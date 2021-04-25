@@ -21,23 +21,45 @@
             </div>
         </nav>
     </header>
-    <div class="wrapper">
-        <nav id="sidebar">
-            <div class="row">
-                <div class="col">
-                    <input id="city-name" type="text" class="form-control" placeholder="Search for a city"
-                        aria-label="First name">
+    <div id="body" class="container row">
+        <div class="wrapper col-md-4">
+            <nav id="sidebar">
+                <div id="search-bar" class="row">
+                    <div class="col">
+                        <input id="city-input" type="text" class="form-control" placeholder="Search for a city"
+                            aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <button id="search" type="button" class="btn btn-primary">Search</button>
+                    </div>
                 </div>
-                <div class="col">
-                    <button id="search" type="button" class="btn btn-primary">Search</button>
+                <h3 class="sidebar-header">Previous Searches</h3>
+                <ul id="prev-search" class="list-unstyled components">
+                    <li id="new-card-here"></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="weather-info" class="col-md-8">
+            <h1 id="city-name">test</h1>
+            <div class="card" style="width: 18rem;">
+                <div class="current-conditions">
+                    <h5 class="card-title">Current Conditions <img id="icon" src="" alt="Weather Icon"></h5>
+                    <h6 id="date" class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p id="temp" class="card-text"></p>
+                    <p id="hum" class="card-text"></p>
+                    <p id="wind-speed" class="card-text"></p>
+                    <p id="uv" class="card-text"></p>
                 </div>
             </div>
-            <h3 class="sidebar-header">Previous Searches</h3>
-            <ul id="prev-search" class="list-unstyled components">
-                <li id="new-card-here"></li>
-            </ul>
-        </nav>
+            <p></p>
+            <div id="weekly" class="row">
+                <div id='new-weekday-here'></div>
+            </div>
+        </div>
+
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="./assets/script.js"></script>
